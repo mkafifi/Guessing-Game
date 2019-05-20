@@ -1,8 +1,4 @@
-draft_journal_entry.txt:
-	touch draft_journal_entry.txt
-readme.txt: toc.txt
-	echo "This journal contains the following number of entries:" > readme.txt
-	wc -l toc.txt | egrep -o "[0-9]+" >> readme.txt
-clean:
-	rm draft_journal_entry.txt
-	rm readme.txt
+README.md:
+	echo "The Guessing Game Project" > README.md
+	echo "make file run on" `date '+%Y-%m-%d %H:%M:%S'` >> README.md
+	echo "The are" `cat guessinggame.sh | wc -l` "of lines of code in guessinggame.sh" >> README.md
